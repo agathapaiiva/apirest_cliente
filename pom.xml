@@ -12,9 +12,9 @@
 	<artifactId>apirest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apirest</name>
-	<description>Demo project for Spring Boot</description>
+	<description>API REST - Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
