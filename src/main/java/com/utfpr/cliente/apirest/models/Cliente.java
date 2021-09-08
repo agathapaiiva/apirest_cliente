@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.lang.NonNull;
+
 /**
  * 
  * @author Agatha Paiva
@@ -24,7 +26,9 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@NonNull
 	private String nome;
+	@NonNull
 	private String cidade;
 	
 	public long getId() {
