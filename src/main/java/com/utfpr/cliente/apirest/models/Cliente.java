@@ -2,13 +2,12 @@ package com.utfpr.cliente.apirest.models;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.lang.NonNull;
 
 /**
  * 
@@ -26,9 +25,9 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	@NonNull
+	@Column(name = "nome", nullable = false)
 	private String nome;
-	@NonNull
+	@Column(name = "cidade", nullable = false)
 	private String cidade;
 	
 	public long getId() {
