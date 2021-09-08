@@ -2,6 +2,8 @@ package com.utfpr.cliente.apirest.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -48,7 +50,7 @@ public class ClienteController {
 	
 	@PostMapping("/cliente")
 	@ApiOperation(value = "Salva um cliente")
-	public Cliente salvaCliente(@RequestBody Cliente cliente) {
+	public Cliente salvaCliente(@Valid @RequestBody Cliente cliente) {
 		return clienteRepository.save(cliente);
 	}
 	

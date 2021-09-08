@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 /**
  * 
@@ -25,8 +26,11 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@NotBlank(message = "Campo obrigatorio")
 	@Column(name = "nome", nullable = false)
 	private String nome;
+	
+	@NotBlank(message = "Campo obrigatorio")
 	@Column(name = "cidade", nullable = false)
 	private String cidade;
 	
