@@ -1,2 +1,0 @@
-INSERT INTO `CLIENTE` VALUES (1, 'Agatha');
-

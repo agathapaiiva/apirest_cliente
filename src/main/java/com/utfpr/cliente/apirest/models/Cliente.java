@@ -25,6 +25,7 @@ public class Cliente implements Serializable{
 	private long id;
 	
 	private String nome;
+	private String cidade;
 	
 	public long getId() {
 		return id;
@@ -38,4 +39,11 @@ public class Cliente implements Serializable{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	
 }

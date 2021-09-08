@@ -52,10 +52,10 @@ public class ClienteController {
 		return clienteRepository.save(cliente);
 	}
 	
-	@DeleteMapping("/cliente")
+	@DeleteMapping("/cliente/{id}")
 	@ApiOperation(value = "Deleta um cliente")
-	public void deletaUmCliente(@RequestBody Cliente cliente) {
-		clienteRepository.delete(cliente);
+	public void deletaUmCliente(@PathVariable(value = "id") long id) {
+		clienteRepository.deleteById(id);
 	}
 	
 	@PutMapping("/cliente")
